@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3451d89-4330-491a-8c33-0fb4138ccf8f" name="Default Changelist" comment="" />
+    <list default="true" id="e3451d89-4330-491a-8c33-0fb4138ccf8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Labo3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Labo3/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +15,7 @@
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad1_2.coverage" NAME="Lab2Zad1_2 Coverage Results" MODIFIED="1634287307005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad9.coverage" NAME="Lab2Zad9 Coverage Results" MODIFIED="1634890274317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad11.coverage" NAME="Lab2Zad11 Coverage Results" MODIFIED="1634890571234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Labo2$Lab2Zad13.coverage" NAME="Lab2Zad13 Coverage Results" MODIFIED="1635497764831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad3.coverage" NAME="Lab2Zad3 Coverage Results" MODIFIED="1634287637737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad5.coverage" NAME="Lab2Zad5 Coverage Results" MODIFIED="1634287998831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Labo2$Lab2Zad6.coverage" NAME="Lab2Zad6 Coverage Results" MODIFIED="1634288725712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -23,37 +26,48 @@
     <session id="-1722175737">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="621" />
+          <entry key="py" value="1002" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="621" />
+          <entry key="Python" value="1002" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lab2Zad13.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,6 +93,7 @@
         <option value="$PROJECT_DIR$/Lab2Zad10.py" />
         <option value="$PROJECT_DIR$/Lab2Zad11.py" />
         <option value="$PROJECT_DIR$/Lab2Zad12.py" />
+        <option value="$PROJECT_DIR$/Lab2Zad13.py" />
       </list>
     </option>
   </component>
@@ -101,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,7 +128,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lab2Zad12">
+  <component name="RunManager" selected="Python.Lab2Zad13">
     <configuration name="Lab2Zad10" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Labo2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,7 +221,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Lab2Zad6" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Lab2Zad13" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Labo2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -219,7 +234,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab2Zad6.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab2Zad13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,19 +266,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Lab2Zad6" />
       <item itemvalue="Python.Lab2Zad9" />
       <item itemvalue="Python.Lab2Zad10" />
       <item itemvalue="Python.Lab2Zad11" />
       <item itemvalue="Python.Lab2Zad12" />
+      <item itemvalue="Python.Lab2Zad13" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lab2Zad13" />
         <item itemvalue="Python.Lab2Zad12" />
         <item itemvalue="Python.Lab2Zad11" />
         <item itemvalue="Python.Lab2Zad10" />
         <item itemvalue="Python.Lab2Zad9" />
-        <item itemvalue="Python.Lab2Zad6" />
       </list>
     </recent_temporary>
   </component>
@@ -388,6 +403,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lab2Zad13.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
     </entry>
