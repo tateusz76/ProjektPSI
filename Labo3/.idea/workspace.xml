@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbddf93d-dba0-4598-a4ad-1f82520ac010" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Lab3Zad5-6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3Zad5-6.py" afterDir="false" />
-    </list>
+    <list default="true" id="dbddf93d-dba0-4598-a4ad-1f82520ac010" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +22,11 @@
     <session id="-1918689241">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,7 +54,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,6 +116,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Labo2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -312,9 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <marker date="1634891592368" expanded="true" signature="26:31" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -336,9 +333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <marker date="1634893413268" expanded="true" signature="25:30" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -346,9 +340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <marker date="1634893649120" expanded="true" signature="18:23" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -356,14 +347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <marker date="1635495248448" expanded="true" signature="17:22" ph="..." />
-            <marker date="1635495248448" expanded="true" signature="105:110" ph="..." />
-            <marker date="1635495248448" expanded="true" signature="164:169" ph="..." />
-            <marker date="1635495248448" expanded="true" signature="221:226" ph="..." />
-            <marker date="1635495248448" expanded="true" signature="276:281" ph="..." />
-            <marker date="1635495248448" expanded="true" signature="345:453" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -371,9 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="6" selection-end-column="17" />
-          <folding>
-            <marker date="1635496072674" expanded="true" signature="18:23" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
