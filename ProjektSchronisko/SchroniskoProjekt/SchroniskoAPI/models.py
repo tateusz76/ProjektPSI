@@ -1,13 +1,21 @@
 from django.db import models
 
+
 # Create your models here.
 
+class Adopcja(models.Model):
+    dataAdopcji = models.DateField()
+    imie = models.CharField(max_length=30)
+    nazwisko = models.CharField(max_length=30)
+
+
 class Zwierze(models.Model):
-   imie = models.CharField(max_length=30)
-   rasa = models.CharField(max_length=30)
-   rokUrodzenia = models.IntegerField()
-   rokPrzygarniecia = models.IntegerField()
-   typ = models.IntegerField()
+    idAdopcja = models.ForeignKey(Adopcja, on_delete=models.CASCADE, null=True)
+    imie = models.CharField(max_length=30)
+    rasa = models.CharField(max_length=30)
+    rokUrodzenia = models.IntegerField()
+    rokPrzygarniecia = models.IntegerField()
+    typ = models.IntegerField()
 
 
 class Pracownik(models.Model):
@@ -23,19 +31,4 @@ class Zabieg(models.Model):
     pracownicy = models.ManyToManyField('pracownik')
 
 
-class Magazyn(models.Model):
-    nazwaObiektu = models.CharField(max_length=45)
-    ilosc = models.IntegerField()
 
-
-class Datki(models.Model):
-    nazwa = models.CharField(max_length=45)
-    ilosc = models.IntegerField()
-    idObiektu = models.ForeignKey(Magazyn, on_delete=models.CASCADE)
-
-
-class Zamowienia(models.Model):
-    nazwaObiektu = models.CharField(max_length=45)
-    ilosc = models.IntegerField()
-    dataZamowienia = models.DateField()
-    idObiektu = models.ForeignKey(Magazyn, on_delete=models.CASCADE)
