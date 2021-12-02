@@ -6,7 +6,5 @@ from .models import *
 admin.site.register(Zwierze)
 admin.site.register(Pracownik)
 admin.site.register(Zabieg)
-admin.site.register(Magazyn)
-admin.site.register(Zamowienia)
-admin.site.register(Datki)
+admin.site.register(Adopcja)
 
