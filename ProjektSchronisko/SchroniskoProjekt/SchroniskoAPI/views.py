@@ -3,7 +3,17 @@ from .serializers import *
 from rest_framework import generics
 
 
-class AdopcjaList(generics.ListAPIView):
+class StanowiskoList(generics.ListAPIView):
+    queryset = Stanowisko.objects.all()
+    serializer_class = StanowiskoSerializer
+
+
+class RodzajeList(generics.ListAPIView):
+    queryset = RodzajeZabiegow.objects.all()
+    serializer_class = RodzajeSerializer
+
+
+class AdopcjaList(generics.ListCreateAPIView):
     queryset = Adopcja.objects.all()
     serializer_class = AdopcjaSerializer
 
@@ -13,7 +23,7 @@ class AdopcjaDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AdopcjaSerializer
 
 
-class ZwierzeList(generics.ListAPIView):
+class ZwierzeList(generics.ListCreateAPIView):
     queryset = Zwierze.objects.all()
     serializer_class = ZwierzeSerializer
 
@@ -23,7 +33,7 @@ class ZwierzeDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ZwierzeSerializer
 
 
-class PracownikList(generics.ListAPIView):
+class PracownikList(generics.ListCreateAPIView):
     queryset = Pracownik.objects.all()
     serializer_class = PracownikSerializer
 
@@ -33,7 +43,7 @@ class PracownikDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PracownikSerializer
 
 
-class ZabiegiList(generics.ListAPIView):
+class ZabiegiList(generics.ListCreateAPIView):
     queryset = Zabieg.objects.all()
     serializer_class = ZabiegiSerializer
 
