@@ -16,6 +16,28 @@ Zabiegi = [
 ]
 
 
+class Stanowisko(models.Model):
+    stanowisko = models.CharField(max_length=45)
+
+    def __str__(self):
+        name = str(self.stanowisko)
+        return name
+
+    class Meta:
+        verbose_name_plural = "Stanowiska"
+
+
+class RodzajeZabiegow(models.Model):
+    rodzaj = models.CharField(max_length=45)
+
+    def __str__(self):
+        name = str(self.rodzaj)
+        return name
+
+    class Meta:
+        verbose_name_plural = "Rodzaje Zabiegów"
+
+
 class Adopcja(models.Model):
     dataAdopcji = models.DateField()
     imie = models.CharField(max_length=30)
@@ -30,11 +52,11 @@ class Adopcja(models.Model):
 
 
 class Zwierze(models.Model):
-    idAdopcja = models.ForeignKey(Adopcja, related_name='adopcje', on_delete=models.CASCADE, null=True, blank=True)
+    data_adopcji = models.ForeignKey(Adopcja, related_name='adopcje', on_delete=models.CASCADE, null=True, blank=True)
     imie = models.CharField(max_length=30)
     rasa = models.CharField(max_length=30)
-    rokUrodzenia = models.IntegerField()
-    rokPrzygarniecia = models.IntegerField()
+    rok_Urodzenia = models.IntegerField()
+    rok_Przygarniecia = models.IntegerField()
     kot = models.BooleanField()
 
     def __str__(self):
@@ -52,10 +74,10 @@ class Pracownik(models.Model):
     imie = models.CharField(max_length=45)
     nazwisko = models.CharField(max_length=45)
     dataZatrudnienia = models.DateField()
-    stanowisko = models.CharField(max_length=45, choices=Stanowiska)
+    stanowisko = models.ForeignKey(Stanowisko, related_name='stanowiska', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.imie + ' ' + self.nazwisko + ' | ' + self.stanowisko
+        return self.imie + ' ' + self.nazwisko + ' | ' + str(self.stanowisko)
 
     class Meta:
         verbose_name_plural = "Pracownicy"
@@ -63,9 +85,9 @@ class Pracownik(models.Model):
 
 class Zabieg(models.Model):
     idZwierze = models.ForeignKey(Zwierze, related_name='zwierze', on_delete=models.CASCADE)
-    rodzajZabiegu = models.CharField(max_length=45, choices=Zabiegi)
+    rodzajZabiegu = models.ForeignKey(RodzajeZabiegow, related_name='rodzaje', on_delete=models.CASCADE)
     dataZabiegu = models.DateField(null=True)
-    pracownicy = models.ManyToManyField('pracownik')
+    # pracownicy = models.ManyToManyField('pracownik')
 
     def __str__(self):
         rodzaj = str(self.rodzajZabiegu)

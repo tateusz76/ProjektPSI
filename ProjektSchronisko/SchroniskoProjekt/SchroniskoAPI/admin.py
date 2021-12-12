@@ -7,4 +7,6 @@ admin.site.register(Zwierze)
 admin.site.register(Pracownik)
 admin.site.register(Zabieg)
 admin.site.register(Adopcja)
+admin.site.register(Stanowisko)
+admin.site.register(RodzajeZabiegow)
 
