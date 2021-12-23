@@ -11,10 +11,11 @@ class AdopcjaSerializer(serializers.HyperlinkedModelSerializer):
 
 class ZwierzeSerializer(serializers.HyperlinkedModelSerializer):
     data_adopcji = serializers.SlugRelatedField(queryset=Adopcja.objects.all(), slug_field='dataAdopcji')
+    zabieg = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='zabieg-details')
 
     class Meta:
         model = Zwierze
-        fields = ['id', 'data_adopcji', 'imie', 'rasa', 'rok_Urodzenia', 'rok_Przygarniecia', 'kot']
+        fields = ['id', 'data_adopcji', 'imie', 'rasa', 'rok_Urodzenia', 'rok_Przygarniecia', 'kot', 'zabieg']
 
 
 class PracownikSerializer(serializers.HyperlinkedModelSerializer):
@@ -38,11 +39,12 @@ class RodzajeSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ZabiegiSerializer(serializers.HyperlinkedModelSerializer):
-    rodzajZabiegu = serializers.SlugRelatedField(queryset=RodzajeZabiegow.objects.all(), slug_field='rodzaje')
-    idZwierze = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='zwierze_details')
-    # pracownicy = serializers.SlugRelatedField(queryset=Pracownik.objects.all(), slug_field='imie')
+    rodzajZabiegu = serializers.SlugRelatedField(queryset=RodzajeZabiegow.objects.all(), slug_field='rodzaj')
+    zwierze = serializers.SlugRelatedField(queryset=Zwierze.objects.all(), slug_field='imie')
+    pracownicy = serializers.SlugRelatedField(queryset=Pracownik.objects.all(), many=True, slug_field='imie')
+    # pracownicy = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Zabieg
-        fields = ['id', 'rodzajZabiegu', 'idZwierze', 'dataZabiegu']
+        fields = ['id', 'zwierze', 'rodzajZabiegu', 'dataZabiegu', 'pracownicy']
 

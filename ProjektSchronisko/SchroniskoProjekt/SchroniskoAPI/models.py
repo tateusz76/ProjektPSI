@@ -84,16 +84,16 @@ class Pracownik(models.Model):
 
 
 class Zabieg(models.Model):
-    idZwierze = models.ForeignKey(Zwierze, related_name='zwierze', on_delete=models.CASCADE)
+    zwierze = models.ForeignKey(Zwierze, related_name='zabieg', on_delete=models.CASCADE)
     rodzajZabiegu = models.ForeignKey(RodzajeZabiegow, related_name='rodzaje', on_delete=models.CASCADE)
     dataZabiegu = models.DateField(null=True)
-    # pracownicy = models.ManyToManyField('pracownik')
+    pracownicy = models.ManyToManyField('pracownik')
 
     def __str__(self):
-        rodzaj = str(self.rodzajZabiegu)
-        data = str(self.dataZabiegu)
-        name = rodzaj + ' | ' + data
-        return name
+        # rodzaj = str(self.rodzajZabiegu)
+        # data = str(self.dataZabiegu)
+        # name = rodzaj + ' | ' + data
+        return ''
 
     class Meta:
         verbose_name_plural = "Zabiegi"
