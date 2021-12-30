@@ -8,6 +8,7 @@ from rest_framework.reverse import reverse
 class StanowiskoList(generics.ListAPIView):
     queryset = Stanowisko.objects.all()
     serializer_class = StanowiskoSerializer
+    name = 'stanowisko-list'
 
 
 class RodzajeList(generics.ListAPIView):
@@ -25,6 +26,7 @@ class RodzajeDetail(generics.RetrieveUpdateDestroyAPIView):
 class AdopcjaList(generics.ListCreateAPIView):
     queryset = Adopcja.objects.all()
     serializer_class = AdopcjaSerializer
+    name = 'adopcja-list'
 
 
 class AdopcjaDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -47,6 +49,7 @@ class ZwierzeDetail(generics.RetrieveUpdateDestroyAPIView):
 class PracownikList(generics.ListCreateAPIView):
     queryset = Pracownik.objects.all()
     serializer_class = PracownikSerializer
+    name = 'pracownik-list'
 
 
 class PracownikDetail(generics.RetrieveUpdateDestroyAPIView):
