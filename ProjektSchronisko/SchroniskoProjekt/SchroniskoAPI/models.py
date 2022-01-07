@@ -2,22 +2,23 @@ from django.db import models
 
 # Create your models here.
 
-Stanowiska = [
-    ("chirug", "chirurg"),
-    ("wolontariusz", "wolontariusz"),
-    ("pracownik administracji", "pracownik administracji"),
-    ("pracownik konserwacji", "pracownik konserwacji"),
-]
-
-Zabiegi = [
-    ("operacja", "operacja"),
-    ("szczepienie", "szczepienie"),
-    ("okresowe badanie", "okresowe badanie"),
-]
+# Stanowiska = [
+#     ("chirug", "chirurg"),
+#     ("wolontariusz", "wolontariusz"),
+#     ("pracownik administracji", "pracownik administracji"),
+#     ("pracownik konserwacji", "pracownik konserwacji"),
+# ]
+#
+# Zabiegi = [
+#     ("operacja", "operacja"),
+#     ("szczepienie", "szczepienie"),
+#     ("okresowe badanie", "okresowe badanie"),
+# ]
 
 
 class Stanowisko(models.Model):
     stanowisko = models.CharField(max_length=45)
+    owner = models.ForeignKey('auth.User', related_name='stanowiskaUser', on_delete=models.CASCADE)
 
     def __str__(self):
         name = str(self.stanowisko)
@@ -29,6 +30,7 @@ class Stanowisko(models.Model):
 
 class RodzajeZabiegow(models.Model):
     rodzaj = models.CharField(max_length=45)
+    owner = models.ForeignKey('auth.User', related_name='zabiegiUser', on_delete=models.CASCADE)
 
     def __str__(self):
         name = str(self.rodzaj)
