@@ -1,20 +1,31 @@
 from .models import Adopcja
 from .serializers import *
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework import permissions
+from django.contrib.auth.models import User
+from .custompermission import OwnerOrRead
 
 
 class StanowiskoList(generics.ListAPIView):
     queryset = Stanowisko.objects.all()
     serializer_class = StanowiskoSerializer
     name = 'stanowisko-list'
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, OwnerOrRead,)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class RodzajeList(generics.ListAPIView):
     queryset = RodzajeZabiegow.objects.all()
     serializer_class = RodzajeSerializer
     name = 'rodzaje-list'
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, OwnerOrRead,)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class RodzajeDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -38,6 +49,7 @@ class ZwierzeList(generics.ListCreateAPIView):
     queryset = Zwierze.objects.all()
     serializer_class = ZwierzeSerializer
     name = 'zwierze-list'
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class ZwierzeDetail(generics.RetrieveUpdateDestroyAPIView):
