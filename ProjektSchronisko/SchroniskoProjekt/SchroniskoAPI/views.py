@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from .custompermission import OwnerOrRead
 
 
-class StanowiskoList(generics.ListAPIView):
+class StanowiskoList(generics.ListCreateAPIView):
     queryset = Stanowisko.objects.all()
     serializer_class = StanowiskoSerializer
     name = 'stanowisko-list'
@@ -43,6 +43,7 @@ class AdopcjaList(generics.ListCreateAPIView):
 class AdopcjaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Adopcja.objects.all()
     serializer_class = AdopcjaSerializer
+    name = 'adopcja-details'
 
 
 class ZwierzeList(generics.ListCreateAPIView):
@@ -50,6 +51,7 @@ class ZwierzeList(generics.ListCreateAPIView):
     serializer_class = ZwierzeSerializer
     name = 'zwierze-list'
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    search_fields = ['imie']
 
 
 class ZwierzeDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -67,12 +69,14 @@ class PracownikList(generics.ListCreateAPIView):
 class PracownikDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Pracownik.objects.all()
     serializer_class = PracownikSerializer
+    name = 'pracownik-details'
 
 
 class ZabiegiList(generics.ListCreateAPIView):
     queryset = Zabieg.objects.all()
     serializer_class = ZabiegiSerializer
     name = 'zabieg-list'
+
 
 
 class ZabiegiDetail(generics.RetrieveUpdateDestroyAPIView):

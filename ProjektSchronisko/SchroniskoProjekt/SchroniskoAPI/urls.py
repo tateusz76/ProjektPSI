@@ -1,6 +1,8 @@
 from django.urls import path, include
 from . import views
+from django.contrib import admin
 
+admin.site.site_url = 'http://127.0.0.1:8000/SchroniskoAPI/'
 urlpatterns = [
     path('stanowisko', views.StanowiskoList.as_view(), name='stanowisko-list'),
     path('rodzaje', views.RodzajeList.as_view(), name='rodzaje-list'),
