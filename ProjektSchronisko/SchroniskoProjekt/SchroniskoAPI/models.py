@@ -46,15 +46,18 @@ class Adopcja(models.Model):
     nazwisko = models.CharField(max_length=30)
 
     def __str__(self):
-        name = str(self.dataAdopcji)
-        return name
+        date = str(self.dataAdopcji)
+        name = str(self.imie)
+        last_name = str(self.nazwisko)
+        date = date + ' ' + name + ' ' + last_name
+        return date
 
     class Meta:
         verbose_name_plural = "Adopcje"
 
 
 class Zwierze(models.Model):
-    data_adopcji = models.ForeignKey(Adopcja, related_name='adopcje', on_delete=models.CASCADE, null=True, blank=True)
+    id_adopcji = models.ForeignKey(Adopcja, related_name='adopcje', on_delete=models.CASCADE, null=True, blank=True)
     imie = models.CharField(max_length=30)
     rasa = models.CharField(max_length=30)
     rok_Urodzenia = models.IntegerField()
